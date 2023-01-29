@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;900&display=swap');
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+body{
+    position: relative;
+}
+.weather{
+    height: 150vh;
+    background: url('first-bg.jpeg');
+   background-position: center;
+   background-repeat: no-repeat;
+   width: 100%;
+   background-size: cover; 
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   align-items: center;
+   position: relative;
+   text-align: center;
+   margin: auto;
+   padding: 0;
+   object-fit: contain;
+}
+
+
+.btn{
+    font-size: 40px;
+    color: white;
+}
+.heading{
+    font-size: 50px;
+    color: rgb(250, 250, 250);
+font-weight: bolder;
+text-shadow: 2px 1.5px blue;
+z-index: 2;
+background-color: rgb(24, 40, 54);
+padding: 7px;
+border-radius: 10px;
+filter: saturate(100%);
+opacity: 0.9;
+filter: blur(1px);
+position: relative;
+top: 150px;
+
+}
+.cold-icon{
+    font-size: 100px;
+}
+.diff-images img{
+    margin-top: 10px;
+    width: 300px;
+    height: 300px;
+    box-shadow: 5px 5px 15px violet;
+    object-fit: cover;
+    position: absolute;
+    top: 50px;
+    right: 550px;
+    animation-name: diff-img;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+.cold-heading{
+    color: rgb(56, 2, 61);
+    font-size: 50px;
+    display: block;
+    text-shadow: 2px 2px rgb(253, 252, 252);
+    background-color: rgb(90, 74, 74);
+    padding: 10px;
+    border-radius: 10px;
+    opacity: 0.8;
+    backdrop-filter: blur(10px);
+    transition: all 0.5s ease;
+    height: 80px;
+    text-align: center;
+    position: absolute;
+    top: 50px;
+    right: 500px;
+    animation-name: report-heading;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+.cold-heading:hover{
+    opacity: 0.9;
+}
+.cloud{
+    height: 150px;
+    width: 200px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    animation-name: cloud;
+    animation-fill-mode: forwards;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    margin-top: 100px;
+    position: relative;
+    top: 80px;
+}
+@keyframes cloud {
+   0%{
+rotate: 0deg;
+border-radius: 0;
+   } 
+   100%{
+    rotate: 360deg;
+    border-radius: 50%;
+   }
+}
+.table table{
+    background-color: rgb(185, 195, 204);
+    font-size: 20px;
+    border-radius: 5px;
+    border: 2.5px double blue;
+    padding: 10px;
+    position: absolute;
+    top: 50px;
+    right: 100px;
+    animation-name: report;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+@keyframes report{
+  0%{
+    transform: translateY(0);
+  } 
+  100%{
+    transform: translateY(550px);
+  } 
+}
+@keyframes diff-img{
+    0%{
+      transform: translateY(0);
+      transform: translateX(400px);
+      
+    } 
+    100%{
+      transform: translateY(130px);
+    } 
+  }
+  @keyframes report-heading{
+    0%{
+      transform: translateY(0);
+      transform: translateX(-400px);
+    } 
+    100%{
+      transform: translateY(450px);
+    } 
+  }
